@@ -71,13 +71,13 @@ def index():
 def upload():
     if request.method == 'POST':
         # Get the file from post request
-        f = request.files['image']
+#         f = request.files['image']
 
-        # Save the file to ./uploads
-        basepath = os.path.dirname(__file__)
-        file_path = os.path.join(
-            basepath, 'uploads', secure_filename(f.filename))
-        f.save(file_path)
+#         # Save the file to ./uploads
+#         basepath = os.path.dirname(__file__)
+#         file_path = os.path.join(
+#             basepath, 'uploads', secure_filename(f.filename))
+#         f.save(file_path)
 
         # Make prediction
         preds = model_predict(file_path, model)
