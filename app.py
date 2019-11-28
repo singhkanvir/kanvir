@@ -11,7 +11,6 @@ from keras.applications.imagenet_utils import preprocess_input, decode_predictio
 from keras.models import load_model
 from keras.preprocessing import image
 
-import tensorflow as tf
 # Flask utils
 from flask import Flask, redirect, url_for, request, render_template
 from werkzeug.utils import secure_filename
@@ -32,7 +31,7 @@ MODEL_PATH = 'models/cat_and_dog'
 # Check https://keras.io/applications/
 # from keras.applications.resnet50 import ResNet50
 # model = ResNet50(weights='imagenet')
-model = tf.keras.models.load_model("models/cat_and_dog")
+model = load_model("models/cat_and_dog")
 print('Model loaded. Check http://127.0.0.1:5000/')
 
 
